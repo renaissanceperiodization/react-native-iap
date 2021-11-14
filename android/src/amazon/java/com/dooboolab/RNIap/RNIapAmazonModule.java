@@ -1,4 +1,4 @@
-package com.dooboolab.RNIap;
+package com.dooboolab.RNIapAndroid;
 
 import com.amazon.device.iap.PurchasingService;
 import com.amazon.device.iap.model.FulfillmentResult;

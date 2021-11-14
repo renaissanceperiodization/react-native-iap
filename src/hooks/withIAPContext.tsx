@@ -9,7 +9,6 @@ import {
   SubscriptionPurchase,
 } from '../types';
 import {
-  getPromotedProductIOS,
   initConnection,
   purchaseErrorListener,
   purchaseUpdatedListener,
@@ -122,22 +121,9 @@ export function withIAPContext<T>(Component: React.ComponentType<T>) {
         },
       );
 
-      const promotedProductsSubscription = IAPEmitter.addListener(
-        'iap-promoted-product',
-        async () => {
-          const product = await getPromotedProductIOS();
-
-          setPromotedProductsIOS((prevProducts) => [
-            ...prevProducts,
-            ...(product ? [product] : []),
-          ]);
-        },
-      );
-
       return () => {
         purchaseUpdateSubscription.remove();
         purchaseErrorSubscription.remove();
-        promotedProductsSubscription.remove();
       };
     }, [connected]);
 

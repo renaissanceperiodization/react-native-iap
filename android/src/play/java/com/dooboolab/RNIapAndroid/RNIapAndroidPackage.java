@@ -1,4 +1,4 @@
-package com.dooboolab.RNIap;
+package com.dooboolab.RNIapAndroid;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class RNIapPackage implements ReactPackage {
+public class RNIapAndroidPackage implements ReactPackage {
   public List<Class<? extends JavaScriptModule>> createJSModules() {
     return Collections.emptyList();
   }
@@ -22,7 +22,7 @@ public class RNIapPackage implements ReactPackage {
   @Override
   public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new RNIapModule(reactContext));
+    modules.add(new RNIapAndroidModule(reactContext));
     return modules;
   }
 }

@@ -1,12 +1,12 @@
-package com.dooboolab.RNIap;
+package com.dooboolab.RNIapAndroid;
 
-import static com.dooboolab.RNIap.DoobooUtils.E_ALREADY_OWNED;
-import static com.dooboolab.RNIap.DoobooUtils.E_DEVELOPER_ERROR;
-import static com.dooboolab.RNIap.DoobooUtils.E_ITEM_UNAVAILABLE;
-import static com.dooboolab.RNIap.DoobooUtils.E_NETWORK_ERROR;
-import static com.dooboolab.RNIap.DoobooUtils.E_SERVICE_ERROR;
-import static com.dooboolab.RNIap.DoobooUtils.E_UNKNOWN;
-import static com.dooboolab.RNIap.DoobooUtils.E_USER_CANCELLED;
+import static com.dooboolab.RNIapAndroid.DoobooUtils.E_ALREADY_OWNED;
+import static com.dooboolab.RNIapAndroid.DoobooUtils.E_DEVELOPER_ERROR;
+import static com.dooboolab.RNIapAndroid.DoobooUtils.E_ITEM_UNAVAILABLE;
+import static com.dooboolab.RNIapAndroid.DoobooUtils.E_NETWORK_ERROR;
+import static com.dooboolab.RNIapAndroid.DoobooUtils.E_SERVICE_ERROR;
+import static com.dooboolab.RNIapAndroid.DoobooUtils.E_UNKNOWN;
+import static com.dooboolab.RNIapAndroid.DoobooUtils.E_USER_CANCELLED;
 
 import android.util.Log;
 import com.android.billingclient.api.BillingClient;

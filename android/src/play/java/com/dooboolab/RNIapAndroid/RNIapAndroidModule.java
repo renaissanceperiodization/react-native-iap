@@ -1,4 +1,4 @@
-package com.dooboolab.RNIap;
+package com.dooboolab.RNIapAndroid;
 
 import android.app.Activity;
 import android.util.Log;
@@ -40,8 +40,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RNIapModule extends ReactContextBaseJavaModule implements PurchasesUpdatedListener {
-  final String TAG = "RNIapModule";
+public class RNIapAndroidModule extends ReactContextBaseJavaModule implements PurchasesUpdatedListener {
+  final String TAG = "RNIapAndroidModule";
 
   private static final String PROMISE_BUY_ITEM = "PROMISE_BUY_ITEM";
   private final ReactContext reactContext;
@@ -49,7 +49,7 @@ public class RNIapModule extends ReactContextBaseJavaModule implements Purchases
 
   private final Map<String, SkuDetails> skus;
 
-  public RNIapModule(ReactApplicationContext reactContext) {
+  public RNIapAndroidModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
     this.skus = new HashMap<>();
@@ -75,7 +75,7 @@ public class RNIapModule extends ReactContextBaseJavaModule implements Purchases
   @NonNull
   @Override
   public String getName() {
-    return "RNIapModule";
+    return "RNIapAndroidModule";
   }
 
   private interface EnsureConnectionCallback {

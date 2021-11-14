@@ -1,4 +1,4 @@
-package com.dooboolab.RNIap;
+package com.dooboolab.RNIapAndroid;
 
 import android.util.Log;
 import androidx.annotation.Nullable;

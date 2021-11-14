@@ -43,9 +43,6 @@ android {
   }
   flavorDimensions "store"
   productFlavors {
-    amazon{
-      dimension "store"
-    }
     play{
       dimension "store"
     }
@@ -63,7 +60,6 @@ dependencies {
   playImplementation 'com.android.billingclient:billing:4.0.0'
   def playServicesVersion = safeExtGet('playServicesVersion', DEFAULT_PLAY_SERVICES_VERSION)
   playImplementation "com.google.android.gms:play-services-base:$playServicesVersion"
-  amazonImplementation fileTree(dir: 'libs', include: ['*.jar'])
 
   def supportLibVersion = safeExtGet('supportLibVersion', safeExtGet('supportVersion', null))
   def androidXVersion = safeExtGet('androidXVersion', null)

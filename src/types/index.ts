@@ -36,7 +36,6 @@ export const PROMOTED_PRODUCT = 'iap-promoted-product';
 export enum InstallSourceAndroid {
   NOT_SET = 0,
   GOOGLE_PLAY = 1,
-  AMAZON = 2,
 }
 
 export interface ProductCommon {
@@ -54,10 +53,6 @@ export interface ProductPurchase {
   transactionDate: number;
   transactionReceipt: string;
   purchaseToken?: string;
-  //iOS
-  quantityIOS?: number;
-  originalTransactionDateIOS?: string;
-  originalTransactionIdentifierIOS?: string;
   //Android
   dataAndroid?: string;
   signatureAndroid?: string;
@@ -68,11 +63,6 @@ export interface ProductPurchase {
   developerPayloadAndroid?: string;
   obfuscatedAccountIdAndroid?: string;
   obfuscatedProfileIdAndroid?: string;
-  //Amazon
-  userIdAmazon?: string;
-  userMarketplaceAmazon?: string;
-  userJsonAmazon?: string;
-  isCanceledAmazon?: boolean;
 }
 
 export interface PurchaseResult {
@@ -94,8 +84,6 @@ export type InAppPurchase = ProductPurchase;
 
 export interface SubscriptionPurchase extends ProductPurchase {
   autoRenewingAndroid?: boolean;
-  originalTransactionDateIOS?: string;
-  originalTransactionIdentifierIOS?: string;
 }
 
 export type Purchase = InAppPurchase | SubscriptionPurchase;
@@ -122,22 +110,6 @@ export interface Subscription extends ProductCommon {
   discounts?: Discount[];
 
   introductoryPrice?: string;
-  introductoryPriceAsAmountIOS?: string;
-  introductoryPricePaymentModeIOS?:
-    | ''
-    | 'FREETRIAL'
-    | 'PAYASYOUGO'
-    | 'PAYUPFRONT';
-  introductoryPriceNumberOfPeriodsIOS?: string;
-  introductoryPriceSubscriptionPeriodIOS?:
-    | 'DAY'
-    | 'WEEK'
-    | 'MONTH'
-    | 'YEAR'
-    | '';
-
-  subscriptionPeriodNumberIOS?: string;
-  subscriptionPeriodUnitIOS?: '' | 'YEAR' | 'MONTH' | 'WEEK' | 'DAY';
 
   introductoryPriceCyclesAndroid?: string;
   introductoryPricePeriodAndroid?: string;

@@ -11,9 +11,8 @@ describe('Google Play IAP', () => {
     }));
   });
 
-  it("should call init on Google Play's native module but not on Amazon's", async () => {
+  it("should call init on Google Play's native module", async () => {
     await initConnection();
     expect(NativeModules.RNIapModule.initConnection).toBeCalled();
-    expect(NativeModules.RNIapAmazonModule.initConnection).not.toBeCalled();
   });
 });

@@ -19,8 +19,8 @@ sidebar_position: 100
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainApplication.java`
-    - Add `import com.dooboolab.RNIap.RNIapPackage;` to the imports at the top of the file
-    - Add `new RNIapPackage()` to the list returned by the `getPackages()` method
+    - Add `import com.dooboolab.RNIap.RNIapAndroidPackage;` to the imports at the top of the file
+    - Add `new RNIapAndroidPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
     ```gradle
     include ':react-native-iap'
@@ -32,7 +32,7 @@ sidebar_position: 100
     ```
 
 4. You have two options depending on the stores you support:
-  
+
     a. If you only need for Google Play IAP, Insert this inside the `defaultConfig` section in `android/app/build.gradle`:
 
     ```gradle
@@ -42,7 +42,7 @@ sidebar_position: 100
           missingDimensionStrategy 'store', 'play'
       }
     ```
-  
+
     b. If you are using it for both Google Play and Amazon, insert the following lines inside the `android` block in `android/app/build.gradle`
 
     ```gradle
