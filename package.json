@@ -1,6 +1,6 @@
 {
   "name": "@renper/react-native-iap-android",
-  "version": "7.5.2",
+  "version": "7.5.3",
   "description": "React Native In App Purchase Module.",
   "main": "index.js",
   "types": "index.d.ts",
