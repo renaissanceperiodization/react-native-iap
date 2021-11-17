@@ -94,9 +94,6 @@ public class RNIapAndroidModule extends ReactContextBaseJavaModule implements Pu
   @ReactMethod
   public void initConnection(final Promise promise) {
     if (billingClientCache != null) {
-      Log.i(
-          TAG,
-          "Already initialized, you should only call initConnection() once when your app starts");
       promise.resolve(true);
       return;
     }
